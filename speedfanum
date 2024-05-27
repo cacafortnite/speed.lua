@@ -1,0 +1,14 @@
+local player = game.Players.LocalPlayer
+local userInputService = game:GetService("UserInputService")
+local fanumtax = false 
+local function fanyum(input)
+	if input.KeyCode == Enum.KeyCode.Q then
+		if fanumtax then
+			player.Character.Humanoid.WalkSpeed = 16
+		else
+			player.Character.Humanoid.WalkSpeed = 100
+		end
+		fanumtax = not fanumtax 
+	end
+end
+userInputService.InputBegan:Connect(fanyum)
